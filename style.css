@@ -1,0 +1,390 @@
+/* ========================= */
+/* FONT */
+/* ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* ========================= */
+/* WARNA */
+/* ========================= */
+:root{
+    --primary:#0B1F3A;
+    --secondary:#163A63;
+    --white:#ffffff;
+    --accent:#3FA9F5;
+    --soft:#EAF3FF;
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffffff,#EAF3FF);
+    color:var(--primary);
+    min-height:100vh;
+    line-height:1.6;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url("https://www.transparenttextures.com/patterns/cubes.png");
+    opacity:.05;
+    z-index:-1;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    background:var(--primary);
+    color:var(--white);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ========================= */
+/* TITLE HEADER */
+/* ========================= */
+header h1{
+    font-size:1.6rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* ========================= */
+/* NAV */
+/* ========================= */
+nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:var(--white);
+    font-weight:500;
+    padding:8px 12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+/* ========================= */
+/* SECTION STYLE (LEBIH MODERN & ENAK DIBACA) */
+/* ========================= */
+section{
+    background:var(--white);
+    border:1px solid #dbe6f5;
+    border-radius:18px;
+    padding:35px 25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+section:hover{
+    transform:translateY(-4px);
+}
+
+/* ========================= */
+/* JUDUL SECTION */
+/* ========================= */
+section h1,
+section h2,
+section h3{
+    text-align:center;
+    font-size:1.6rem;
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+/* ========================= */
+/* PARAGRAF BIAR ENAK DIBACA */
+/* ========================= */
+section p{
+    text-align:center;
+    max-width:750px;
+    margin:10px auto;
+    font-size:1rem;
+    color:#2b3b52;
+}
+/* ========================= */
+/* HOME CENTER VERSION */
+/* ========================= */
+
+#home{
+    background:linear-gradient(135deg,#0B1F3A,#163A63);
+    color:#fff;
+    text-align:center;
+    border:none;
+}
+
+/* container utama */
+.home-center{
+    max-width:700px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* foto profil */
+.home-center img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #3FA9F5;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.home-center img:hover{
+    transform:scale(1.05);
+}
+
+/* judul kecil */
+.home-center h2{
+    font-size:20px;
+    color:#3FA9F5;
+    margin-bottom:5px;
+}
+
+/* judul utama */
+.home-center h1{
+    font-size:38px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+/* paragraf */
+.home-center p{
+    font-size:16px;
+    color:#eaeaea;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* tombol */
+.btn-home{
+    display:inline-block;
+    padding:12px 30px;
+    background:#3FA9F5;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-home:hover{
+    background:#ffffff;
+    color:#0B1F3A;
+    transform:translateY(-2px);
+}
+/* ========================= */
+/* PROFILE (ABOUT + FOTO LEBIH RAPI) */
+/* ========================= */
+.profile-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+/* foto profile */
+.profile-photo img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid var(--accent);
+    transition:.3s;
+}
+
+.profile-photo img:hover{
+    transform:scale(1.05);
+}
+
+/* teks profile */
+.profile-text{
+    max-width:500px;
+}
+
+/* ========================= */
+/* GALERI (TIDAK DIUBAH BESAR) */
+/* ========================= */
+#galery ul{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:15px;
+    list-style:none;
+    max-width:900px;
+    margin:auto;
+}
+
+#galery li{
+    overflow:hidden;
+    border-radius:15px;
+    border:1px solid #dbe6f5;
+    background:var(--white);
+    transition:.3s;
+}
+
+#galery li:hover{
+    transform:translateY(-6px);
+}
+
+#galery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* ========================= */
+/* VIDEO (TIDAK DIUBAH BESAR) */
+/* ========================= */
+#vidio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+#vidio video,
+#vidio iframe{
+    width:300px;
+    height:180px;
+    border-radius:12px;
+    border:3px solid var(--accent);
+    object-fit:cover;
+    transition:.3s;
+}
+
+#vidio video:hover,
+#vidio iframe:hover{
+    transform:scale(1.05);
+}
+
+/* ========================= */
+/* BUKU TAMU (LEBIH MODERN & CLEAN) */
+/* ========================= */
+#bukutamu form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    max-width:600px;
+    margin:auto;
+}
+
+/* input & textarea */
+#bukutamu input,
+#bukutamu textarea{
+    width:100%;
+    padding:14px;
+    background:var(--soft);
+    border:1px solid #c9dcf5;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+/* fokus input */
+#bukutamu input:focus,
+#bukutamu textarea:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 8px rgba(63,169,245,.3);
+}
+
+/* textarea */
+#bukutamu textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+/* tombol */
+#bukutamu button{
+    background:var(--primary);
+    color:var(--white);
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#bukutamu button:hover{
+    background:var(--accent);
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+footer{
+    text-align:center;
+    padding:20px;
+    background:var(--primary);
+    color:var(--white);
+    border-top:3px solid var(--accent);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width:768px){
+
+    #galery ul{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    #vidio video,
+    #vidio iframe{
+        width:100%;
+        height:200px;
+    }
+}
+
+@media (max-width:480px){
+    #galery ul{
+        grid-template-columns:1fr;
+    }
+}
